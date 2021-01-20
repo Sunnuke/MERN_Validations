@@ -9,10 +9,6 @@ export default (props) => {
     }
     return(
         <>
-            <Link to={"/new"}>
-                Add an Author
-            </Link>
-            <p>We have quotes by:</p>
             <table>
                 <thead>
                     <tr>
