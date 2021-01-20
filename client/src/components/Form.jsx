@@ -12,7 +12,7 @@ export default (props) => {
     return(
         <div>
             <form onSubmit={ProcessAuthor}>
-                <label>Author</label>
+                <label>Author's Name:</label>
                 <input type="text" 
                 name="author"
                 value={author}
