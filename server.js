@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 // Import routes file and address app
-require("./server/routes/product.routes")(app);
+require("./server/routes/author.routes")(app);
 
 // Set app to listen for selected port and console.log a message to verify connectivity
 app.listen(port, () => console.log(`server.js: Listening to port ${port}`));
