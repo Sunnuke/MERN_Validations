@@ -35,7 +35,7 @@ export default (props) => {
             <Link to={"/"}>
                 Home
             </Link> <br />
-            <p>Add a new author</p>
+            <p>Edit this author</p>
             <Form authorIn={author} submitAuthor={updateAuthor} />
             {
                 load ?
