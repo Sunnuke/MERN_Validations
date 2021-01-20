@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/NAME_DB", {
+// Set mongoose to connect/create mongoDB server and console log activity
+mongoose.connect("mongodb://localhost/authorsdb", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
