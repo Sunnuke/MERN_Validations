@@ -1,4 +1,4 @@
-const { Author } = require("../models/_HERE.model");
+const { Author } = require("../models/author.model");
 
 // Connection Status
 module.exports.index = (request, response) => {
