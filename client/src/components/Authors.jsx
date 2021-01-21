@@ -1,7 +1,8 @@
 import { navigate } from "@reach/router";
+import DeleteButton from "./DeleteButton";
 
 export default (props) => {
-    const { authors, settingList } = props;
+    const { authors, removingDOM } = props;
     const editing = (id) => {
         console.log(id);
         navigate("/edit/" + id);
@@ -23,7 +24,7 @@ export default (props) => {
                                     <td>{author.name}</td>
                                     <td>
                                         <button onClick={ e => editing(author._id) } >Edit</button>
-                                        <button>Fake Delete</button>
+                                        <DeleteButton authorId={author._id} removingDOM={removingDOM} />
                                     </td>
                                 </tr>
                             )

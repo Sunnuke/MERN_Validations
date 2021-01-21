@@ -18,13 +18,17 @@ export default () => {
         .catch(err => console.log(err));
     }, []);
 
+    const removingDOM = (authorId) => {
+        settingList(authors.filter(author => author._id != authorId));
+    }
+
     return(
         <div>
             <Link to={"/new"}>
                 Add an Author
             </Link>
             <p>We have quotes by:</p>
-            <Authors authors={authors} settingList={settingList} />
+            <Authors authors={authors} removingDOM={removingDOM} />
         </div>
     )
 }
