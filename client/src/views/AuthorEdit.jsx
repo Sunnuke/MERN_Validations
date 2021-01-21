@@ -47,7 +47,7 @@ export default (props) => {
             {load && <Form authorIn={author} submitAuthor={updateAuthor} />}
             {
                 eload ?
-                <p>{errors}</p> :
+                <p style={{color: "red"}}>{errors}</p> :
                 ''
             }
         </div>

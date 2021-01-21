@@ -24,7 +24,7 @@ export default (props) => {
                                     <td>{author.name}</td>
                                     <td>
                                         <button onClick={ e => editing(author._id) } >Edit</button>
-                                        <DeleteButton authorId={author._id} removingDOM={removingDOM} />
+                                        <DeleteButton authorId={author._id} removingDOM={() => removingDOM(author._id)} />
                                     </td>
                                 </tr>
                             )

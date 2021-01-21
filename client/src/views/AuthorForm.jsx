@@ -35,7 +35,7 @@ export default () => {
             <Form authorIn="" submitAuthor={createAuthor} />
             {
                 load ?
-                <p>{errors}</p> :
+                <p style={{color: "red"}}>{errors}</p> :
                 ''
             }
         </div>
