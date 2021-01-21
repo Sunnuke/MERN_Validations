@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Link, navigate } from "@reach/router";
+import { Link } from "@reach/router";
 import axios from "axios";
+import Authors from "../components/Authors";
 
 export default () => {
     const [ authors, setAuthors ] = useState([]);
@@ -15,14 +16,15 @@ export default () => {
             settingList(res.data);
         })
         .catch(err => console.log(err));
-    });
+    }, []);
 
     return(
-        <>
+        <div>
             <Link to={"/new"}>
                 Add an Author
             </Link>
             <p>We have quotes by:</p>
-        </>
+            <Authors authors={authors} settingList={settingList} />
+        </div>
     )
 }

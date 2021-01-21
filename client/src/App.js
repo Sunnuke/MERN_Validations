@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <AuthorList path="" />
+        <AuthorList path="/" />
         <AuthorForm path="new" />
         <AuthorEdit path="edit/:id" />
       </Router>

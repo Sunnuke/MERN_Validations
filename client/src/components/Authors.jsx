@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Link, navigate } from "@reach/router";
-import axios from "axios";
+import { navigate } from "@reach/router";
 
 export default (props) => {
     const { authors, settingList } = props;
     const editing = (id) => {
+        console.log(id);
         navigate("/edit/" + id);
     }
     return(
-        <>
+        <div>
             <table>
                 <thead>
                     <tr>
@@ -19,17 +18,19 @@ export default (props) => {
                 <tbody>
                     {
                         authors.map((author, i) => {
-                            <tr>
-                                <td>{author.name}</td>
-                                <td>
-                                    <button onClick={ e => editing(author._id) } >Edit</button>
-                                    <button>Fake Delete</button>
-                                </td>
-                            </tr>
+                            return(
+                                <tr key={i}>
+                                    <td>{author.name}</td>
+                                    <td>
+                                        <button onClick={ e => editing(author._id) } >Edit</button>
+                                        <button>Fake Delete</button>
+                                    </td>
+                                </tr>
+                            )
                         })
                     }
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }

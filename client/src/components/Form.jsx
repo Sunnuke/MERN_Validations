@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 export default (props) => {
     const { authorIn,  submitAuthor } = props;
-    const [ author, setAuthor ] = useState(authorIn);
+    const [ name, setName ] = useState(authorIn);
 
     const ProcessAuthor = (e) => {
         e.preventDefault();
-        submitAuthor({ author });
+        submitAuthor({ name });
     }
 
     return(
@@ -14,9 +14,9 @@ export default (props) => {
             <form onSubmit={ProcessAuthor}>
                 <label>Author's Name:</label>
                 <input type="text" 
-                name="author"
-                value={author}
-                onChange={ e => setAuthor(e.target.value) } /><br/>
+                name="name"
+                value={name}
+                onChange={ e => { setName(e.target.value) } } /><br/>
                 <input type="submit" />
             </form>
         </div>
